@@ -10,12 +10,16 @@ body {
     text-decoration: none;
 }
 
+.medium {
+    font-size: 20px;
+}
+
 a.disabled-link {
     opacity: 0.5;
     pointer-events: none;
 }
 
-@media only screen and (min-width: 100px) {
+@media only screen and (min-width: 600px) {
     nav {
         background-image: linear-gradient(to right, rgb(35, 167, 234), rgba(36, 187, 16, 0.623));
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -52,12 +56,80 @@ a.disabled-link {
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.252);
     }
 
-    #option {
+    .option {
         display: block;
         padding: 10px;
     }
 
-    #option:hover {
+    .option:hover {
+        transition: ease-in-out 0.3s;
         background-color: rgba(22, 172, 125, 0.742);
     }
+
+    .mobile {
+        display: none;
+    }
+    #board-options{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        background-image: linear-gradient(to right, rgb(35, 167, 234), rgba(36, 187, 16, 0.623));
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 5px;
+    }
+
+    .home-item {
+        position: absolute;
+        font-size: 180%;
+        margin-right: 8px;
+    }
+
+    .options {
+        display: none;
+        font-size: 130%;
+    }
+
+    .mobile {
+        display: block;
+        text-align: right;
+    }
+
+    .mobile #more-options {
+        width: 30px;
+        margin-top: 2px;
+        margin-right: 15px;
+    }
+
+    .mobile #more-options:hover {
+        background-color: rgba(70, 101, 70, 0.426);
+        border-radius: 15%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    #board-options {
+        display: none;
+        padding: 2%;
+        background-color: rgba(36, 187, 16, 0.497);
+        height: fit-content;
+    }
+
+    #droplist-mobile {
+        display: none;
+    }
+
+    .option{
+        display: block;
+        margin-left: 10px;
+        width: fit-content;
+    }
+    .option:hover {
+        background-color: rgb(72, 168, 137);
+    }
+
+
+
 }
